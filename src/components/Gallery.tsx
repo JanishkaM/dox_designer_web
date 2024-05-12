@@ -1,4 +1,4 @@
-import { CvDataType } from "@/types/CvData";
+import { CvDataType } from "@/types/CvDataTypes";
 import WhatsAppButton from "./WhatsAppButton";
 
 interface GalleryProps {
@@ -7,10 +7,10 @@ interface GalleryProps {
 
 export default function Gallery({ data }: GalleryProps) {
   return (
-    <section className="py-32">
-      <div className="text-center mb-12">
-        <h3 className="text-4xl font-bold uppercase">
-          Our Cv Design Templates
+    <section className="py-16" id="cv-designs">
+      <div className="container text-center mb-12">
+        <h3 className="text-4xl font-bold uppercase text-primary mb-4">
+          Our Cv Design Templates.
         </h3>
         <p>
           Choose a favorite and provide your CV ID to us. We are going to get
@@ -36,7 +36,7 @@ export default function Gallery({ data }: GalleryProps) {
                 <p className="cursor-pointer z-10 text-lg mb-6 text-slate-100">
                   Click below button and send your CV ID to us.
                 </p>
-                <WhatsAppButton message={item.description} />
+                <WhatsAppButton message={`${item.description}\n\nTag: CV Inquiry`} />
               </div>
             </div>
           ))}

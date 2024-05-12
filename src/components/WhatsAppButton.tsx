@@ -11,7 +11,7 @@ export default function WhatsAppButton({message}: WhatsAppButtonProps) {
   const staticMessage = message;  
 
   const handleMessageSend = () => {
-    const encodedMessage = encodeURIComponent(`${staticMessage}\n\nTag: CV Inquiry`);
+    const encodedMessage = encodeURIComponent(`${staticMessage}`);
     const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
     window.open(whatsappLink, '_blank');
   };

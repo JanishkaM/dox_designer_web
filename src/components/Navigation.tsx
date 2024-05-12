@@ -5,8 +5,9 @@ import { Button } from "./ui/button";
 
 const menuLinks = [
   { name: "Home", path: "/", type: "link" },
-  { name: "Contact Us", path: "/contact", type: "link" },
-  { name: "Other Services", path: "/other", type: "link" },
+  { name: "Services", path: "/services", type: "link" },
+  { name: "About Us", path: "/about", type: "link" },
+  { name: "Contact Us", path: "/contact", type: "button" },
 ];
 
 export default function Navigation() {
@@ -14,8 +15,8 @@ export default function Navigation() {
 
   return !isDesktop ? (
     <nav className="bg-secondary">
-      <div className="container items-center mx-auto px-2 py-4 flex justify-between">
-        <div className="w-40 h-auto">
+      <div className="container items-center mx-auto px-8 py-4 flex justify-between">
+        <div className="w-32 h-auto">
           <img src="/images/logo.png" alt="DoxDesigner Logo" />
         </div>
         <ul className="flex items-center">
@@ -44,7 +45,7 @@ export default function Navigation() {
   ) : (
     <nav className="bg-secondary">
       <div className="container px-4 py-4 mx-auto flex justify-between">
-        <div className="w-36">
+        <div className="w-32">
           <Link to={menuLinks[0].path}>
             <img src="/images/logo.png" alt="DoxDesigner Logo" />
           </Link>
@@ -77,6 +78,7 @@ export default function Navigation() {
                     <NavLink
                       style={({ isActive }) => ({
                         backgroundColor: isActive ? "#2CAB5B" : "",
+                        color: isActive ? "#fefefe" : "",
                       })}
                       className="block w-full h-full p-4 "
                       to={menuLink.path}

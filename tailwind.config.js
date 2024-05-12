@@ -19,6 +19,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'home-bg': "url('/images/homepage.png')",
+        'page-bg': "url('/images/pagecover.png')",
       },
       colors: {
         border: "hsl(var(--border))",

@@ -1,4 +1,4 @@
-import { CvDataType } from "@/types/CvData";
+import { CvDataType } from "@/types/CvDataTypes";
 
 const CvData: CvDataType[] = [
   {
