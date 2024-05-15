@@ -1,11 +1,30 @@
+import { motion } from "framer-motion";
+
+import { useState } from "react";
 import { CvDataType } from "@/types/CvDataTypes";
 import WhatsAppButton from "./WhatsAppButton";
+import { Button } from "./ui/button";
 
 interface GalleryProps {
   data: CvDataType[];
 }
 
 export default function Gallery({ data }: GalleryProps) {
+  const [visible, setVisible] = useState(6);
+  const [showMore, setShowMore] = useState(false);
+
+  function handleVisiable() {
+    if (visible < data.length) {
+      setVisible(visible + 6);
+    } else {
+      setShowMore(true);
+    }
+  }
+  function handleVisiableDefault() {
+    setVisible(6);
+    setShowMore(false);
+  }
+
   return (
     <section className="py-16" id="cv-designs">
       <div className="container text-center mb-12">
@@ -19,8 +38,12 @@ export default function Gallery({ data }: GalleryProps) {
       </div>
       <div className="bg-green-400 py-8">
         <div className="container columns-1 sm:columns-2 md:columns-3">
-          {data.map((item) => (
-            <div
+          {data.slice(0, visible).map((item) => (
+            <motion.div
+              initial={{ opacity: 0, }}
+              whileInView={{ opacity: 1 }}
+              exit={{ opacity: 0,}}
+              transition={{ duration: 0.7,}}
               key={item.id}
               className="group relative flex justify-center items-center rounded-sm"
             >
@@ -36,10 +59,23 @@ export default function Gallery({ data }: GalleryProps) {
                 <p className="cursor-pointer z-10 text-lg mb-6 text-slate-100">
                   Click below button and send your CV ID to us.
                 </p>
-                <WhatsAppButton message={`${item.description}\n\nTag: CV Inquiry`} />
+                <WhatsAppButton
+                  message={`${item.description}\n\nTag: CV Inquiry`}
+                />
               </div>
-            </div>
+            </motion.div>
           ))}
+        </div>
+        <div className="flex justify-center mt-8">
+          {showMore ? (
+            <Button variant={"outline"} onClick={handleVisiableDefault}>
+              Show Less <i className="bi bi-caret-up ps-2"></i>
+            </Button>
+          ) : (
+            <Button variant={"outline"} onClick={handleVisiable}>
+              Show More <i className="bi bi-caret-down ps-2"></i>
+            </Button>
+          )}
         </div>
       </div>
     </section>

@@ -5,7 +5,7 @@ export default function Cta() {
   return (
     <section className="py-12 bg-slate-200">
       <div className="container flex justify-center flex-col items-start md:items-center">
-        <h3 className="font-extrabold uppercase text-3xl mb-4">
+        <h3 className="font-extrabold uppercase text-3xl mb-8">
           For further information, please contact us.
         </h3>
         <p className="mb-5 md:w-3/4">
