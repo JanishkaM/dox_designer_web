@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Gallery from "@/components/Gallery";
 import CvData from "@/data/CvData";
 import Cta from "@/components/Cta";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -43,9 +44,9 @@ export default function Home() {
               <a href="#cv-designs">
                 <Button>Watch CV Designs</Button>
               </a>
-              <a href="#">
+              <Link to={"/about"}>
                 <Button variant={"outline"}>Learn More About Us</Button>
-              </a>
+              </Link>
             </div>
           </motion.div>
           <motion.div

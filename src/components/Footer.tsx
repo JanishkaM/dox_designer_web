@@ -2,13 +2,13 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-secondary">
-      <div className="container mt-20 py-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <footer className="bg-green-100">
+      <div className="container mt-20 pb-4 pt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         <div>
           <img src="/images/logo.png" alt="" />
         </div>
         <div>
-          <h4 className="font-bold text-2xl mb-4">
+          <h4 className="font-bold text-xl mb-4">
             Other Healpful Website Links
           </h4>
           <div>
@@ -32,7 +32,7 @@ export default function Footer() {
           </div>
         </div>
         <div>
-          <h4 className="font-bold text-2xl mb-4">Contact Us</h4>
+          <h4 className="font-bold text-xl mb-4">Contact Us</h4>
           <div>
             <h4 className="hover:text-primary font-medium leading-none mb-3">
               <a href="whatsapp://send?phone=+94710985154" target="_blank">

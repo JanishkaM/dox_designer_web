@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 export default function Cta() {
   return (
-    <section className="py-12 bg-slate-200">
+    <section className="py-12 bg-green-100">
       <div className="container flex justify-center flex-col items-start md:items-center">
         <h3 className="font-extrabold uppercase text-3xl mb-8">
           For further information, please contact us.

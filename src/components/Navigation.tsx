@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 
 const menuLinks = [
   { name: "Home", path: "/", type: "link" },
+  { name: "Posts", path: "/posts", type: "link" },
   { name: "Services", path: "/services", type: "link" },
   { name: "About Us", path: "/about", type: "link" },
   { name: "Contact Us", path: "/contact", type: "button" },
@@ -14,7 +15,7 @@ export default function Navigation() {
   const isDesktop = useMediaQuery("(max-width: 768px)");
 
   return !isDesktop ? (
-    <nav className="bg-secondary">
+    <header className="bg-green-100/50">
       <div className="container items-center mx-auto px-8 py-4 flex justify-between">
         <div className="w-32 h-auto">
           <img src="/images/logo.png" alt="DoxDesigner Logo" />
@@ -41,9 +42,9 @@ export default function Navigation() {
           )}
         </ul>
       </div>
-    </nav>
+    </header>
   ) : (
-    <nav className="bg-secondary">
+    <header className="bg-green-100/50">
       <div className="container px-4 py-4 mx-auto flex justify-between">
         <div className="w-32">
           <Link to={menuLinks[0].path}>
@@ -101,6 +102,6 @@ export default function Navigation() {
           </DrawerContent>
         </Drawer>
       </div>
-    </nav>
+    </header>
   );
 }

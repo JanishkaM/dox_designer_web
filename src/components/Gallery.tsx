@@ -36,14 +36,14 @@ export default function Gallery({ data }: GalleryProps) {
           you that next job.
         </p>
       </div>
-      <div className="bg-green-400 py-8">
+      <div className="bg-green-200 py-8">
         <div className="container columns-1 sm:columns-2 md:columns-3">
           {data.slice(0, visible).map((item) => (
             <motion.div
               initial={{ opacity: 0, }}
               whileInView={{ opacity: 1 }}
               exit={{ opacity: 0,}}
-              transition={{ duration: 0.7,}}
+              transition={{ duration: 0.9,}}
               key={item.id}
               className="group relative flex justify-center items-center rounded-sm"
             >
@@ -72,8 +72,8 @@ export default function Gallery({ data }: GalleryProps) {
               Show Less <i className="bi bi-caret-up ps-2"></i>
             </Button>
           ) : (
-            <Button variant={"outline"} onClick={handleVisiable}>
-              Show More <i className="bi bi-caret-down ps-2"></i>
+            <Button  onClick={handleVisiable}>
+              Show More
             </Button>
           )}
         </div>
