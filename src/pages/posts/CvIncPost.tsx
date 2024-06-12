@@ -1,8 +1,9 @@
 import { Checkbox } from "@/components/ui/checkbox";
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider  } from 'react-helmet-async';
 
 export default function CvIncPost() {
   return (
+    <HelmetProvider>
     <main>
       <Helmet>
         <title>Detailed Guide On What To Include In Your CV To Make It Perfect.</title>
@@ -570,5 +571,6 @@ export default function CvIncPost() {
         </div>
       </section>
     </main>
+    </HelmetProvider>
   );
 }
