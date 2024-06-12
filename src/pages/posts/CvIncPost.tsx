@@ -1,11 +1,28 @@
 import { Checkbox } from "@/components/ui/checkbox";
+import { Helmet } from 'react-helmet';
 
 export default function CvIncPost() {
   return (
     <main>
+      <Helmet>
+        <title>Detailed Guide On What To Include In Your CV To Make It Perfect.</title>
+        <meta
+          name="description"
+          content="You can make sure your resume has all the information it needs. You can check the details you already have and what you don't have on our website."
+        />
+
+        {/* Open Graph tags */}
+        <meta property="og:title" content="Detailed Guide On What To Include In Your CV To Make It Perfect." />
+        <meta
+          property="og:description"
+          content="You can make sure your resume has all the information it needs. You can check the details you already have and what you don't have on our website."
+        />
+        <meta property="og:image" content="/images/cvincpostsocial.png" />
+        <meta property="og:url" content="https://doxdesigner.netlify.app/posts/cv-include" />
+      </Helmet>
       <section>
         <div className="container">
-          <div className="py-4 grid grid-cols-1 md:grid-cols-2 items-center">
+          <div className="py-4 grid grid-cols-1 md:grid-cols-2 items-center gap-4">
             <div className="order-2">
               <h1 className="text-3xl font-extrabold pb-2">
                 Crafting the Perfect CV: A Comprehensive Guide
