@@ -8,7 +8,7 @@ const ServicesData: ServiceType[] = [
     list: [
       '24/7 Customer Support',
       'A 100% satisfaction guarantee for customers',
-      'Reasonable Price (450 Rs per One page CV)'
+      'Reasonable Price (400 Rs per One page CV)'
     ],
   },
   {
