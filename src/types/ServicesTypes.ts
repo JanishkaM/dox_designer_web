@@ -3,4 +3,6 @@ export interface ServiceType {
   title: string;
   description: string;
   list: Array<string>;
+  image: string;
+  message: string;
 }

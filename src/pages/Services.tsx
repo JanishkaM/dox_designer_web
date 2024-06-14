@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/card";
 
 import PageCover from "@/components/PageCover";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Services() {
   return (
@@ -31,7 +32,7 @@ export default function Services() {
                 </ul>
               </CardContent>
               <CardFooter>
-                <p className="text-sm">Card Footer</p>
+                <WhatsAppButton message={service.message}></WhatsAppButton>                
               </CardFooter>
             </Card>
           ))}

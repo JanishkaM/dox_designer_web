@@ -35,9 +35,11 @@ export default function Navigation() {
                 </NavLink>
               </li>
             ) : (
-              <Button key={index} className="mr-4">
-                <NavLink to={menuLink.path}>{menuLink.name}</NavLink>
-              </Button>
+              <NavLink key={index}  to={menuLink.path}>
+                <Button className="mr-4">
+                  {menuLink.name}
+                </Button>
+              </NavLink>
             )
           )}
         </ul>

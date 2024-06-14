@@ -33,17 +33,18 @@ export default function Gallery({ data }: GalleryProps) {
         </h3>
         <p>
           Choose a favorite and provide your CV ID to us. We are going to get
-          you that next job.
+          you that next job. <br />
+          Click the <b className="font-semibold text-green-600">Send WhatsApp</b> Button to send a CV ID.
         </p>
       </div>
       <div className="bg-green-200 py-8">
         <div className="container columns-1 sm:columns-2 md:columns-3">
           {data.slice(0, visible).map((item) => (
             <motion.div
-              initial={{ opacity: 0, }}
+              initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              exit={{ opacity: 0,}}
-              transition={{ duration: 0.9,}}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.9 }}
               key={item.id}
               className="group relative flex justify-center items-center rounded-sm"
             >
@@ -72,9 +73,7 @@ export default function Gallery({ data }: GalleryProps) {
               Show Less <i className="bi bi-caret-up ps-2"></i>
             </Button>
           ) : (
-            <Button  onClick={handleVisiable}>
-              Show More
-            </Button>
+            <Button onClick={handleVisiable}>Show More</Button>
           )}
         </div>
       </div>

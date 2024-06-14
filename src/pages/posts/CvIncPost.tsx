@@ -1,3 +1,4 @@
+import Cta from "@/components/Cta";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Helmet, HelmetProvider  } from 'react-helmet-async';
 
@@ -21,7 +22,7 @@ export default function CvIncPost() {
         <meta property="og:image" content="/images/cvincpostsocial.png" />
         <meta property="og:url" content="https://doxdesigner.netlify.app/posts/cv-include" />
       </Helmet>
-      <section>
+      <section className="pb-20">
         <div className="container">
           <div className="py-4 grid grid-cols-1 md:grid-cols-2 items-center gap-4">
             <div className="order-2">
@@ -570,6 +571,7 @@ export default function CvIncPost() {
           </p>
         </div>
       </section>
+      <Cta />
     </main>
     </HelmetProvider>
   );
