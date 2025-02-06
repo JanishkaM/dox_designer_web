@@ -34,7 +34,9 @@ export default function Gallery({ data }: GalleryProps) {
         <p>
           Choose a favorite and provide your CV ID to us. We are going to get
           you that next job. <br />
-          Click the <b className="font-semibold text-green-600">Send WhatsApp</b> Button to send a CV ID.
+          Click the{" "}
+          <b className="font-semibold text-green-600">Send WhatsApp</b> Button
+          to send a CV ID.
         </p>
       </div>
       <div className="bg-green-200 py-8">
@@ -68,7 +70,7 @@ export default function Gallery({ data }: GalleryProps) {
           ))}
         </div>
         <div className="flex justify-center mt-8">
-          {showMore ? (
+          {showMore || visible > data.length ? (
             <Button variant={"outline"} onClick={handleVisiableDefault}>
               Show Less <i className="bi bi-caret-up ps-2"></i>
             </Button>

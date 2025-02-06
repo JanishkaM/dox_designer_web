@@ -17,7 +17,7 @@ export default function Navigation() {
   return !isDesktop ? (
     <header className="bg-green-100/50">
       <div className="container items-center mx-auto px-8 py-4 flex justify-between">
-        <div className="w-32 h-auto">
+        <div className="w-36 h-auto">
           <img src="/images/logo.png" alt="DoxDesigner Logo" />
         </div>
         <ul className="flex items-center">
@@ -28,7 +28,7 @@ export default function Navigation() {
                   style={({ isActive }) => ({
                     color: isActive ? "#2CAB5B" : "",
                   })}
-                  className="font-semibold mr-4 hover:text-primary"
+                  className="font-semibold p-4 m-1 hover:text-primary"
                   to={menuLink.path}
                 >
                   {menuLink.name}
@@ -36,7 +36,7 @@ export default function Navigation() {
               </li>
             ) : (
               <NavLink key={index}  to={menuLink.path}>
-                <Button className="mr-4">
+                <Button className="mx-4">
                   {menuLink.name}
                 </Button>
               </NavLink>
