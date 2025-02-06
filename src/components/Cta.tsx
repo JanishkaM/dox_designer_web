@@ -31,7 +31,7 @@ export default function Cta() {
         <div className="flex gap-4">
           <WhatsAppButton message="I need to Know About," />
           <a
-            href="https://www.facebook.com/people/DoxDesigner/61556561968928/"
+            href="https://www.facebook.com/docxdesigner"
             target="_blank"
           >
             <Button className="bg-blue-700 hover:bg-blue-600">Facebook Page</Button>
