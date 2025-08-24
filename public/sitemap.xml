@@ -2,20 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://design.docxdeveloper.com/</loc>
+    <lastmod>2025-08-24T17:46:54.876Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
   </url>
   <url>
     <loc>https://design.docxdeveloper.com/contact</loc>
+    <lastmod>2025-08-24T17:46:54.876Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://design.docxdeveloper.com/about</loc>
+    <lastmod>2025-08-24T17:46:54.876Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://design.docxdeveloper.com/services</loc>
+    <lastmod>2025-08-24T17:46:54.876Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://design.docxdeveloper.com/posts</loc>
+    <lastmod>2025-08-24T17:46:54.876Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://design.docxdeveloper.com/posts/cv-include</loc>
+    <lastmod>2025-08-24T17:46:54.876Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>
