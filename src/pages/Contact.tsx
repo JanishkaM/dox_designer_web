@@ -96,11 +96,11 @@ export default function Contact() {
               <div className="space-y-1">
                 <h4 className="text-lg hover:text-slate-700 font-medium leading-none">
                   <a
-                    href="mailto:doxdeveloperhelpdesk@gmail.com"
+                    href="mailto:mail@docxdeveloper.com"
                     target="_blank"
                   >
                     <i className="bi bi-envelope pe-2 text-3xl"></i>{" "}
-                    doxdeveloperhelpdesk@gmail.com
+                    mail@docxdeveloper.com
                   </a>
                 </h4>
               </div>
