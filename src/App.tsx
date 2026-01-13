@@ -9,9 +9,19 @@ import Services from "./pages/Services";
 import Posts from "./pages/Posts";
 
 import CvIncPost from "./pages/posts/CvIncPost";
+import { useEffect } from "react";
 
+import ReactGA from 'react-ga4';
+
+const MEASUREMENT_ID = process.env.REACT_APP_GA_ID || "";
+ReactGA.initialize(MEASUREMENT_ID);
 
 function App() {
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+  }, []);
+
   return (
     <BrowserRouter>
       <Navigation />

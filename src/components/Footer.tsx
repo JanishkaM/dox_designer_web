@@ -5,7 +5,11 @@ export default function Footer() {
     <footer className="bg-green-100">
       <div className="container mt-20 pb-4 pt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         <div>
-          <img src="/images/logo.png" alt="docx designer logo" className="max-w-60"/>
+          <img
+            src="/images/logo.png"
+            alt="docx designer logo"
+            className="max-w-60"
+          />
         </div>
         <div>
           <h4 className="font-bold text-xl mb-4">
@@ -41,18 +45,15 @@ export default function Footer() {
             </h4>
 
             <h4 className="hover:text-blue-700 font-medium leading-none mb-3">
-              <a
-                href="https://www.facebook.com/docxdesigner"
-                target="_blank"
-              >
+              <a href="https://www.facebook.com/docxdesigner" target="_blank">
                 <i className="bi bi-facebook pe-2 text-lg"></i> doxDesigner
               </a>
             </h4>
 
             <h4 className="hover:text-slate-700 font-medium leading-none mb-3">
-              <a href="mailto:doxdeveloperhelpdesk@gmail.com" target="_blank">
+              <a href="mailto:mail@docxdeveloper.com" target="_blank">
                 <i className="bi bi-envelope pe-2 text-lg"></i>{" "}
-                doxdeveloperhelpdesk@gmail.com
+                mail@docxdeveloper.com
               </a>
             </h4>
           </div>
