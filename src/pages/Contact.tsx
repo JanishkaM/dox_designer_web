@@ -20,13 +20,18 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [body, setBody] = useState("");
-  const [error, setError] = useState(null);
-  const [success, setSuccess] = useState(null);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError(null);
     setSuccess(null);
+
+    if (!name || !email || !subject || !body) {
+      setError("Please fill in all fields.");
+      return;
+    }
 
     try {
       const response = await fetch("https://docxdeveloper.com/api/contact", {
@@ -34,7 +39,13 @@ export default function Contact() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name, email, subject, body }),
+        body: JSON.stringify({
+          name,
+          email,
+          subject,
+          body,
+          website: "design.docxdeveloper.com",
+        }),
       });
 
       const data = await response.json();
@@ -105,7 +116,9 @@ export default function Contact() {
                         />
                       </div>
                     </div>
-                    <Button type="submit">Send Email</Button>
+                    <Button className="mt-3" type="submit">
+                      Send Email
+                    </Button>
                     {error && (
                       <p className="mt-4 text-sm bg-red-400 rounded-md p-4 text-white">
                         {error}
@@ -149,7 +162,8 @@ export default function Contact() {
                     href="https://www.facebook.com/people/DoxDesigner/61556561968928/"
                     target="_blank"
                   >
-                    <i className="bi bi-facebook pe-2 text-3xl"></i> doxDesigner
+                    <i className="bi bi-facebook pe-2 text-3xl"></i>{" "}
+                    DocxDesigner
                   </a>
                 </h4>
               </div>
