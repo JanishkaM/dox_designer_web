@@ -13,7 +13,7 @@ import { Label } from "@/components/ui/label";
 
 import { Separator } from "@/components/ui/separator";
 import { Textarea } from "@/components/ui/textarea";
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -23,7 +23,7 @@ export default function Contact() {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError(null);
     setSuccess(null);
@@ -57,9 +57,13 @@ export default function Contact() {
       setName("");
       setEmail("");
       setBody("");
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error("Error sending email:", err);
-      setError(err.message || "Error sending email. Please try again later.");
+      const message =
+        err instanceof Error
+          ? err.message
+          : "Error sending email. Please try again later.";
+      setError(message);
     }
   };
   return (
