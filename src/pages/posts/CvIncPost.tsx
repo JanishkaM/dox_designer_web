@@ -2,6 +2,7 @@ import Cta from "@/components/Cta";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Helmet, HelmetProvider  } from 'react-helmet-async';
 
+
 export default function CvIncPost() {
   return (
     <HelmetProvider>
